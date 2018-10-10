@@ -14,22 +14,28 @@ namespace Lesson_2
     {
         static void RecurNum(int firstNum, int lastNum)
         {
-            if (lastNum > firstNum)
+            if (lastNum == firstNum)
+            {
+                Console.WriteLine(firstNum);
+            }
+            else
             {
                 RecurNum(firstNum, lastNum - 1);
-            }
-            Console.WriteLine(lastNum);
-            return;
+                Console.WriteLine(lastNum);
+            } 
         }
 
         static int RecurSum(int curNum, int stopNum)
         {
-            int sum = 0;
-            if (curNum < stopNum)
+            if (curNum == stopNum)
             {
-                sum += RecurSum(curNum + 1, stopNum);
+                return curNum;
             }
-            return sum+curNum;
+            else
+            {
+                return RecurSum(curNum + 1, stopNum) + curNum;
+            }
+            
         }
 
         static void Task7()
