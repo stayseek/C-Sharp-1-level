@@ -1,0 +1,7 @@
+D:\geekbrains\Pre-learning\0-3\Exercises\questionnaire\bin\Debug\questionnaire.exe.config
+D:\geekbrains\Pre-learning\0-3\Exercises\questionnaire\bin\Debug\questionnaire.exe
+D:\geekbrains\Pre-learning\0-3\Exercises\questionnaire\bin\Debug\questionnaire.pdb
+D:\geekbrains\Pre-learning\0-3\Exercises\questionnaire\obj\Debug\questionnaire.csprojAssemblyReference.cache
+D:\geekbrains\Pre-learning\0-3\Exercises\questionnaire\obj\Debug\questionnaire.csproj.CoreCompileInputs.cache
+D:\geekbrains\Pre-learning\0-3\Exercises\questionnaire\obj\Debug\questionnaire.exe
+D:\geekbrains\Pre-learning\0-3\Exercises\questionnaire\obj\Debug\questionnaire.pdb
