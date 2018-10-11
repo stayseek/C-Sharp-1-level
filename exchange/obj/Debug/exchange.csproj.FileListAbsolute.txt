@@ -1,7 +1,0 @@
-D:\geekbrains\Pre-learning\0-3\Exercises\exchange\bin\Debug\exchange.exe.config
-D:\geekbrains\Pre-learning\0-3\Exercises\exchange\bin\Debug\exchange.exe
-D:\geekbrains\Pre-learning\0-3\Exercises\exchange\bin\Debug\exchange.pdb
-D:\geekbrains\Pre-learning\0-3\Exercises\exchange\obj\Debug\exchange.csprojAssemblyReference.cache
-D:\geekbrains\Pre-learning\0-3\Exercises\exchange\obj\Debug\exchange.csproj.CoreCompileInputs.cache
-D:\geekbrains\Pre-learning\0-3\Exercises\exchange\obj\Debug\exchange.exe
-D:\geekbrains\Pre-learning\0-3\Exercises\exchange\obj\Debug\exchange.pdb
