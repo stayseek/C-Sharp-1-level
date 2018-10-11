@@ -1,7 +1,0 @@
-D:\geekbrains\Pre-learning\0-3\Exercises\PrivateData\bin\Debug\PrivateData.exe.config
-D:\geekbrains\Pre-learning\0-3\Exercises\PrivateData\bin\Debug\PrivateData.exe
-D:\geekbrains\Pre-learning\0-3\Exercises\PrivateData\bin\Debug\PrivateData.pdb
-D:\geekbrains\Pre-learning\0-3\Exercises\PrivateData\obj\Debug\PrivateData.csproj.CoreCompileInputs.cache
-D:\geekbrains\Pre-learning\0-3\Exercises\PrivateData\obj\Debug\PrivateData.exe
-D:\geekbrains\Pre-learning\0-3\Exercises\PrivateData\obj\Debug\PrivateData.pdb
-D:\geekbrains\Pre-learning\0-3\Exercises\PrivateData\obj\Debug\PrivateData.csprojAssemblyReference.cache

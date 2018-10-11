@@ -1,6 +1,0 @@
-D:\geekbrains\Pre-learning\0-3\Exercises\BMI\bin\Debug\BMI.exe.config
-D:\geekbrains\Pre-learning\0-3\Exercises\BMI\bin\Debug\BMI.exe
-D:\geekbrains\Pre-learning\0-3\Exercises\BMI\bin\Debug\BMI.pdb
-D:\geekbrains\Pre-learning\0-3\Exercises\BMI\obj\Debug\BMI.csproj.CoreCompileInputs.cache
-D:\geekbrains\Pre-learning\0-3\Exercises\BMI\obj\Debug\BMI.exe
-D:\geekbrains\Pre-learning\0-3\Exercises\BMI\obj\Debug\BMI.pdb
