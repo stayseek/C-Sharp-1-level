@@ -1,0 +1,6 @@
+D:\geekbrains\Pre-learning\0-3\Exercises\Distance\bin\Debug\Distance.exe.config
+D:\geekbrains\Pre-learning\0-3\Exercises\Distance\bin\Debug\Distance.exe
+D:\geekbrains\Pre-learning\0-3\Exercises\Distance\bin\Debug\Distance.pdb
+D:\geekbrains\Pre-learning\0-3\Exercises\Distance\obj\Debug\Distance.csproj.CoreCompileInputs.cache
+D:\geekbrains\Pre-learning\0-3\Exercises\Distance\obj\Debug\Distance.exe
+D:\geekbrains\Pre-learning\0-3\Exercises\Distance\obj\Debug\Distance.pdb
