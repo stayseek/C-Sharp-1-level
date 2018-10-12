@@ -120,9 +120,10 @@ namespace Lesson_3
             }
             return small;
         }
-        public string Simplify() //вывод упрощенной дроби
+        public Fraction Simplify() //вывод упрощенной дроби
         {
-            return (numerator / NOD() + "/" + denominator / NOD());
+            Fraction y = new Fraction(numerator / NOD(), denominator / NOD());
+            return y;
         }
         public override string ToString()//красивый вывод дроби
         {
@@ -138,13 +139,14 @@ namespace Lesson_3
             Fraction a = new Fraction(16, 48);
             Fraction b = new Fraction(23, 49);
             Console.WriteLine(a.ToString());
-            Console.WriteLine(a.Simplify());
-            Console.WriteLine(a.Add(b).Simplify());
-            Console.WriteLine(a.Sub(b).Simplify());
-            Console.WriteLine(a.Multi(b).Simplify());
-            Console.WriteLine(a.Div(b).Simplify());
+            Console.WriteLine(a.Simplify().ToString());
+            Console.WriteLine(a.Add(b).Simplify().ToString());
+            Console.WriteLine(a.Sub(b).Simplify().ToString());
+            Console.WriteLine(a.Multi(b).Simplify().ToString());
+            Console.WriteLine(a.Div(b).Simplify().ToString());
             Console.WriteLine("{0:F4}",a.DecimalFraction);
-            Console.WriteLine();
+            a = a.Simplify();
+            Console.WriteLine(a.ToString());
             Pause();
         }
     }
