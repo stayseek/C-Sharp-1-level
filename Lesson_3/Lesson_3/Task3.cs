@@ -1,4 +1,6 @@
-﻿//Описать класс дробей — рациональных чисел, являющихся отношением двух целых чисел.
+﻿//Автор: Станислав Митрофанов
+//Задание 3:
+//Описать класс дробей — рациональных чисел, являющихся отношением двух целых чисел.
 //Предусмотреть методы сложения, вычитания, умножения и деления дробей. Написать
 //программу, демонстрирующую все разработанные элементы класса.
 //* Добавить свойства типа int для доступа к числителю и знаменателю;
@@ -40,7 +42,11 @@ namespace Lesson_3
         {
             set
             {
-                if (value != 0)
+                if (value == 0)
+                {
+                    throw new ArgumentException("Знаменатель не может быть равен 0");
+                }
+                else
                 {
                     denominator = value;
                 }
@@ -68,13 +74,13 @@ namespace Lesson_3
         public Fraction(int numerator, int denominator)
         {
             this.numerator = numerator;
-            if (denominator != 0)
+            if (denominator == 0)
             {
-                this.denominator = denominator;
+                throw new ArgumentException("Знаменатель не может быть равен 0");
             }
             else
             {
-                this.denominator = 1;
+                this.denominator = denominator;
             }
             
         }
@@ -108,10 +114,10 @@ namespace Lesson_3
             y.denominator = denominator * x.numerator;
             return y;
         }
-        int NOD () //поиск наибольшего общего делителя
+        int NOD () //поиск наибольшего общего делителя, данные надо брать по модулю
         {
-            int big = (Numerator > Denominator) ? Numerator : Denominator;
-            int small = (big == Numerator) ? Denominator : Numerator;
+            int big = (Math.Abs(numerator) > Math.Abs(denominator)) ? Math.Abs(numerator) : Math.Abs(denominator);
+            int small = (big == Math.Abs(numerator)) ? Math.Abs(denominator) : Math.Abs(numerator);
             while (big % small != 0)
             {
                 int ost = big % small;
@@ -120,34 +126,66 @@ namespace Lesson_3
             }
             return small;
         }
-        public Fraction Simplify() //вывод упрощенной дроби
+
+        public Fraction Simplify() //упрощение дроби
         {
             Fraction y = new Fraction(numerator / NOD(), denominator / NOD());
             return y;
         }
-        public override string ToString()//красивый вывод дроби
+
+        public override string ToString()//красивый вывод дроби. Добавим выделение целой части, вне задания, просто так лучше выглядит
         {
-            return (numerator+"/"+denominator);
+            if (Math.Abs(numerator) > Math.Abs(denominator))
+            {
+                string temp = string.Empty;
+                if (numerator%denominator != 0)
+                {
+                    temp = " "+(Math.Abs(numerator % denominator)) + "/" + denominator;
+                }
+                return (numerator / denominator) + temp;
+            }
+            else
+            {
+                return (numerator + "/" + denominator);
+            }
         }
+
 
     }
     partial class Program
     {
         static void Task3()
         {
+            int num;
+            int den;
             Console.Clear();
-            Fraction a = new Fraction(16, 48);
-            Fraction b = new Fraction(23, 49);
-            Console.WriteLine(a.ToString());
-            Console.WriteLine(a.Simplify().ToString());
-            Console.WriteLine(a.Add(b).Simplify().ToString());
-            Console.WriteLine(a.Sub(b).Simplify().ToString());
-            Console.WriteLine(a.Multi(b).Simplify().ToString());
-            Console.WriteLine(a.Div(b).Simplify().ToString());
-            Console.WriteLine("{0:F4}",a.DecimalFraction);
+            // для ввода цифр будем пользоваться функцией контролируемого ввода из 2-го задания.
+            Console.Write("Введите числитель первой дроби: ");
+            num = GetkNumbers();
+            Console.Write("Введите знаменатель первой дроби: ");
+            den = GetkNumbers();
+            Fraction a = new Fraction(num, den);
+
+            Console.Write("Введите числитель второй дроби: ");
+            num = GetkNumbers();
+            Console.Write("Введите знаменатель второй дроби: ");
+            den = GetkNumbers();
+            Fraction b = new Fraction(num, den);
+
+            Console.WriteLine("Операции будут производится над числами " + a + " и " + b);
+            Console.WriteLine("Упрощение первой дроби: "+ a + " = " + a.Simplify());
+            Console.WriteLine("Упрощение второй дроби: " + b + " = " + b.Simplify());
+            //Дальнейшие действия будем проводить для упрощенных дробей и выводить результат с упрощением.
             a = a.Simplify();
-            Console.WriteLine(a.ToString());
+            b = b.Simplify();
+            Console.WriteLine("Десятичный вид первой дроби: " + a + " = " + a.DecimalFraction);
+            Console.WriteLine("Десятичный вид второй дроби: " + b + " = " + b.DecimalFraction);
+            Console.WriteLine("Сумма дробей: " + a +" + " + b + " = " + a.Add(b).Simplify());
+            Console.WriteLine("Разность дробей: " + a + " - " + b + " = " + a.Sub(b).Simplify());
+            Console.WriteLine("Произведение дробей: " + a + " * " + b + " = " + a.Multi(b).Simplify());
+            Console.WriteLine("Деление дробей: " + a + " / " + b + " = " + a.Div(b).Simplify());
             Pause();
+            MainMenu();
         }
     }
 }

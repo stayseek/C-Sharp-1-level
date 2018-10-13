@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Домашнее задание №3
+//Автор: Станислав Митрофанов
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,10 +20,10 @@ namespace Lesson_3
         static void MainMenu()
         {
             Console.Clear();
-            Console.WriteLine("Митрофанов Станислав");
+            Console.WriteLine("Станислав Митрофанов");
             Console.WriteLine("Домашнее задание №3");
-            Console.WriteLine("1 - Работа со структурой и классом");
-            Console.WriteLine("2 - Проверка введённых данных и исключения");
+            Console.WriteLine("1 - Работа со структурой и классом комплексных чисел");
+            Console.WriteLine("2 - Контролируемый ввод данных");
             Console.WriteLine("3 - Класс дробей");
             Console.WriteLine("0 - Exit");
             ConsoleKeyInfo key = Console.ReadKey();

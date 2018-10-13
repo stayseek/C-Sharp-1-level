@@ -1,4 +1,12 @@
-﻿using System;
+﻿//Автор: Станислав Митрофанов
+//Задание 1:
+//а) Дописать структуру Complex, добавив метод вычитания комплексных чисел.
+//Продемонстрировать работу структуры.
+//б) Дописать класс Complex, добавив методы вычитания и произведения чисел.Проверить
+//работу класса.
+//в) Добавить диалог с использованием switch демонстрирующий работу класса.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,7 +42,7 @@ namespace Lesson_3
 
         public override string ToString() //по предложению компилятора добавлено переопределение метода (override)
         {
-            return (im > 0) ? (re + "+" + im + "i") : (re +""+ im + "i");
+            return (im > 0) ? (re + "+" + im + "i") : (re +string.Empty+ im + "i");//предусматривает возможность отрицательной мнимой части
         }
     }
 
@@ -101,7 +109,7 @@ namespace Lesson_3
 
         public override string ToString()
         {
-            return (im > 0) ? (re + "+" + im + "i") : (re + "" + im + "i");
+            return (im > 0) ? (re + "+" + im + "i") : (re + string.Empty + im + "i");//предусматривает возможность отрицательной мнимой части
         }
     }
 
@@ -116,7 +124,7 @@ namespace Lesson_3
             Console.WriteLine("3 - Вычитание чисел");
             Console.WriteLine("0 - Возврат в меню раздела");
 
-            ComplexStruct complexA, complexB;
+            ComplexStruct complexA, complexB;//можно сделать и ручной ввод, но для демонстрации хватит и задания в программе
             complexA.re = 3;
             complexA.im = 2;
             complexB.re = 4;
@@ -167,7 +175,7 @@ namespace Lesson_3
             Console.WriteLine("0 - Возврат в меню раздела");
 
             ComplexClass complexA, complexB;
-            complexA = new ComplexClass(3, 2);
+            complexA = new ComplexClass(3, 2);//попробуем разные варианты задания значений
             complexB = new ComplexClass();
             complexB.Re = 4;
             complexB.Im = 5;
@@ -212,8 +220,8 @@ namespace Lesson_3
         {
             Console.Clear();
             Console.WriteLine("Работа с комплексными числами");
-            Console.WriteLine("1 - Работа структуры");
-            Console.WriteLine("2 - Работа класса");
+            Console.WriteLine("1 - Работа со структурой");
+            Console.WriteLine("2 - Работа с классом");
             Console.WriteLine("0 - Возврат в основное меню");
             ConsoleKeyInfo key = Console.ReadKey();
             switch (key.Key)
